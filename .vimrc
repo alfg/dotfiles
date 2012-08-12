@@ -27,5 +27,5 @@ map  <C-n> :tabnew<CR>
 "Syntax highlighting
 au BufNewFile,BufRead *.{jsp,jspf} setlocal ft=jsp.html     " set .jsp files to edit like HTML
 
-#Omnicomplete python
+"Omnicomplete python
 set ofu=pythoncomplete#Complete
