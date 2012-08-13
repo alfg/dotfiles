@@ -29,3 +29,6 @@ au BufNewFile,BufRead *.{jsp,jspf} setlocal ft=jsp.html     " set .jsp files to 
 
 "Omnicomplete python
 set ofu=pythoncomplete#Complete
+
+"NERDTree Ignore files
+let NERDTreeIgnore = ['\.pyc$']
