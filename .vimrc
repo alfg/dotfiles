@@ -16,6 +16,8 @@ set hidden
 "Custom mappings
 nmap <Space>d :NERDTreeToggle<CR>
 nmap <Leader>d :NERDTreeToggle<CR>
+map T :TaskList<CR>
+map P :TlistToggle<CR> "Ctags
 let g:miniBufExplMapWindowNavVim = 1      " Bind Ctrl + hjkl to switch tabs for MiniBufExpl
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
