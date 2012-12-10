@@ -4,42 +4,36 @@ call pathogen#infect()
 "Basic options
 syntax on
 filetype plugin indent on
-colorscheme slate
-set t_Co=256
+colorscheme slate 
 set nu
 set autoindent
 set shiftwidth=4
+set smartindent
 set expandtab
 set tabstop=4
 set hidden
+let NERDTreeIgnore = ['\.pyc$']
+set nofoldenable
 
 "Custom mappings
 nmap <Space>d :NERDTreeToggle<CR>
 nmap <Leader>d :NERDTreeToggle<CR>
 map T :TaskList<CR>
-map P :TlistToggle<CR> "Ctags
-let g:miniBufExplMapWindowNavVim = 1      " Bind Ctrl + hjkl to switch tabs for MiniBufExpl
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
 map  <C-l> :tabn<CR>
 map  <C-h> :tabp<CR>
 map  <C-n> :tabnew<CR>
 
-"Syntax highlighting
-au BufNewFile,BufRead *.{jsp,jspf} setlocal ft=jsp.html     " set .jsp files to edit like HTML
-
-"Omnicomplete python
+"Omnicomplete Python
+autocmd FileType python set omnifunc=pythoncomplete#Complete
 set ofu=pythoncomplete#Complete
-
-"NERDTree Ignore files
-let NERDTreeIgnore = ['\.pyc$']
 
 "jsbeautify
 map <c-f> :call JsBeautify()<cr>
-" or
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-" for html
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-" for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
